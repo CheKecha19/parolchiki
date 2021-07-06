@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace parolchiki.forms
@@ -12,22 +14,51 @@ namespace parolchiki.forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Close();
+            MainForm main = new MainForm();
+            main.FormClosed += (o, r) => Close();
+            main.Show();
+            Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //проверка подключения к бд
+            DB db = new DB();
+            db.openconnection();
 
-
-            if (true)
+            // отправка данных в БД
             {
-                //sql запрос на отправку полученных значений
+                String
+                    name = "1111111", //добавить хуйню для ввода в БД имени пользователя
+                    acclogin = textBox1.Text,
+                    accpassword = textBox2.Text,
+                    accsite = textBox3.Text,
+                    accphone = textBox4.Text,
+                    accemail = textBox5.Text,
+                    accothers = richTextBox1.Text;
 
-            }
-            else
-            {
-                MessageBox.Show("отсутствует подключение к базе данных");
+                DataTable table = new DataTable();
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+                {
+                    //
+                    // вставка данных в БД
+                    //
+
+                    MySqlCommand command = new MySqlCommand("INSERT INTO `accounts` (`ID`, `User`, `Login`, `Password`, `Site`, `Phone`, `Email`, `Others`) VALUES (NULL, @UN, @UL, @UP, @US, @UPH, @UM, @UO)", db.getConnection());
+                    command.Parameters.Add("@UN", MySqlDbType.VarChar).Value = name;
+                    command.Parameters.Add("@UL", MySqlDbType.VarChar).Value = acclogin;
+                    command.Parameters.Add("@UP", MySqlDbType.VarChar).Value = accpassword;
+                    command.Parameters.Add("@US", MySqlDbType.VarChar).Value = accsite;
+                    command.Parameters.Add("@UPH", MySqlDbType.VarChar).Value = accphone;
+                    command.Parameters.Add("@UM", MySqlDbType.VarChar).Value = accemail;
+                    command.Parameters.Add("@UO", MySqlDbType.VarChar).Value = accothers;
+
+                    adapter.SelectCommand = command;
+                    adapter.Fill(table);
+                    db.regetaccounts();
+                }                
+                Close();                
             }
         }
     }

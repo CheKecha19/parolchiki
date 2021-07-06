@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="parolchiki.DB">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABAAAAEAAAAAAAAAABAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="parolchiki.Program">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="parolchiki.forms.Autorisation">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAABAAAACAAAACAAAYAgAAEGAAAABAAAA=</HashCode>
+      <FileName>forms\Autorisation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="parolchiki.forms.HELP">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAgAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>forms\HELP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="parolchiki.forms.MainForm">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FQwAJAAAACAIgCAAAACSAAACACgACQQSAIAQIAAAAAA=</HashCode>
+      <FileName>forms\MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="parolchiki.forms.newform">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAASAAABAAAACAAABCIAAYAAAAEGAQAAAAAAA=</HashCode>
+      <FileName>forms\newAcc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="parolchiki.forms.Registration">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAABAAAACAAABAAAACAQAACAACAAAAAAAAAgABAAAA=</HashCode>
+      <FileName>forms\Registration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="parolchiki.Properties.Resources">
+    <Position X="3.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="parolchiki.Properties.Settings">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
