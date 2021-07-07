@@ -30,12 +30,12 @@ namespace parolchiki.forms
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.login = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.password = new System.Windows.Forms.TextBox();
+            this.enter = new System.Windows.Forms.Button();
+            this.reg = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,12 +48,12 @@ namespace parolchiki.forms
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // login
             // 
-            this.textBox1.Location = new System.Drawing.Point(197, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 20);
-            this.textBox1.TabIndex = 1;
+            this.login.Location = new System.Drawing.Point(197, 86);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(250, 20);
+            this.login.TabIndex = 1;
             // 
             // label1
             // 
@@ -77,36 +77,36 @@ namespace parolchiki.forms
             this.label2.TabIndex = 3;
             this.label2.Text = "пароль";
             // 
-            // textBox2
+            // password
             // 
-            this.textBox2.Location = new System.Drawing.Point(197, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 20);
-            this.textBox2.TabIndex = 4;
+            this.password.Location = new System.Drawing.Point(197, 128);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(250, 20);
+            this.password.TabIndex = 4;
             // 
-            // button1
+            // enter
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(197, 168);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 25);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "войти";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.enter.BackColor = System.Drawing.Color.Black;
+            this.enter.ForeColor = System.Drawing.SystemColors.Control;
+            this.enter.Location = new System.Drawing.Point(197, 168);
+            this.enter.Name = "enter";
+            this.enter.Size = new System.Drawing.Size(200, 25);
+            this.enter.TabIndex = 5;
+            this.enter.Text = "войти";
+            this.enter.UseVisualStyleBackColor = false;
+            this.enter.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // reg
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(197, 207);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 25);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "зарегистрироваться";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.reg.BackColor = System.Drawing.Color.Black;
+            this.reg.ForeColor = System.Drawing.SystemColors.Control;
+            this.reg.Location = new System.Drawing.Point(197, 207);
+            this.reg.Name = "reg";
+            this.reg.Size = new System.Drawing.Size(200, 25);
+            this.reg.TabIndex = 6;
+            this.reg.Text = "зарегистрироваться";
+            this.reg.UseVisualStyleBackColor = false;
+            this.reg.Click += new System.EventHandler(this.button2_Click);
             // 
             // Autorisation
             // 
@@ -115,12 +115,12 @@ namespace parolchiki.forms
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BackgroundImage = global::parolchiki.Properties.Resources.d065a12ca62f5b8052f2ae58a501fe61;
             this.ClientSize = new System.Drawing.Size(581, 326);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.reg);
+            this.Controls.Add(this.enter);
+            this.Controls.Add(this.password);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.login);
             this.Controls.Add(this.pictureBox1);
             this.HelpButton = true;
             this.MaximizeBox = false;
@@ -137,11 +137,11 @@ namespace parolchiki.forms
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox login;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.Button enter;
+        private System.Windows.Forms.Button reg;
     }
 }

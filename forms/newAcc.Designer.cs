@@ -114,6 +114,7 @@ namespace parolchiki.forms
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(70, 9);
+            this.textBox1.MaxLength = 50;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(243, 20);
             this.textBox1.TabIndex = 6;
@@ -121,6 +122,7 @@ namespace parolchiki.forms
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(70, 53);
+            this.textBox2.MaxLength = 50;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(243, 20);
             this.textBox2.TabIndex = 7;
@@ -128,6 +130,7 @@ namespace parolchiki.forms
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(70, 97);
+            this.textBox3.MaxLength = 1000;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(243, 20);
             this.textBox3.TabIndex = 8;
@@ -135,6 +138,7 @@ namespace parolchiki.forms
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(70, 141);
+            this.textBox4.MaxLength = 11;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(243, 20);
             this.textBox4.TabIndex = 9;
@@ -142,6 +146,7 @@ namespace parolchiki.forms
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(70, 185);
+            this.textBox5.MaxLength = 100;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(243, 20);
             this.textBox5.TabIndex = 10;
@@ -149,6 +154,7 @@ namespace parolchiki.forms
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(70, 226);
+            this.richTextBox1.MaxLength = 5000;
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(243, 139);
             this.richTextBox1.TabIndex = 11;

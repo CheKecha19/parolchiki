@@ -17,6 +17,7 @@ namespace parolchiki.forms
             MainForm main = new MainForm();
             main.FormClosed += (o, r) => Close();
             main.Show();
+            main.refreshdatabase();
             Hide();
         }
 
@@ -28,7 +29,7 @@ namespace parolchiki.forms
             // отправка данных в БД
             {
                 String
-                    name = "1111111", //добавить хуйню для ввода в БД имени пользователя
+                    //name = "User", //добавить хуйню для ввода в БД имени пользователя
                     acclogin = textBox1.Text,
                     accpassword = textBox2.Text,
                     accsite = textBox3.Text,
@@ -37,16 +38,10 @@ namespace parolchiki.forms
                     accothers = richTextBox1.Text;
 
                 DataTable table = new DataTable();
-
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
-
                 {
-                    //
-                    // вставка данных в БД
-                    //
-
-                    MySqlCommand command = new MySqlCommand("INSERT INTO `accounts` (`ID`, `User`, `Login`, `Password`, `Site`, `Phone`, `Email`, `Others`) VALUES (NULL, @UN, @UL, @UP, @US, @UPH, @UM, @UO)", db.getConnection());
-                    command.Parameters.Add("@UN", MySqlDbType.VarChar).Value = name;
+                    MySqlCommand command = new MySqlCommand("INSERT INTO `accounts` (`Login`, `Password`, `Site`, `Phone`, `Email`, `Others`) VALUES (@UL, @UP, @US, @UPH, @UM, @UO)", db.getConnection());
+                    //command.Parameters.Add("@UN", MySqlDbType.VarChar).Value = name;
                     command.Parameters.Add("@UL", MySqlDbType.VarChar).Value = acclogin;
                     command.Parameters.Add("@UP", MySqlDbType.VarChar).Value = accpassword;
                     command.Parameters.Add("@US", MySqlDbType.VarChar).Value = accsite;
@@ -55,10 +50,13 @@ namespace parolchiki.forms
                     command.Parameters.Add("@UO", MySqlDbType.VarChar).Value = accothers;
 
                     adapter.SelectCommand = command;
+                    MainForm main = new MainForm();
+                    main.refreshdatabase();
                     adapter.Fill(table);
-                    db.regetaccounts();
-                }                
-                Close();                
+                    db.closeconnection();
+                }
+
+                Close();
             }
         }
     }

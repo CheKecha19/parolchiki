@@ -1,5 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using System.Data;
 
 namespace parolchiki
 {
@@ -9,29 +8,28 @@ namespace parolchiki
 
         public void openconnection()
         {
-            if (connection.State == System.Data.ConnectionState.Closed)
+            if (connection.State != System.Data.ConnectionState.Open)
             {
                 connection.Open();
+            }
+            else
+            {
+                closeconnection();
+                openconnection();
             }
         }
 
         public void closeconnection()
         {
-            connection.Close();
+            if (connection.State != System.Data.ConnectionState.Closed)
+            {
+                connection.Close();
+            }
         }
 
         public MySqlConnection getConnection()
         {
             return connection;
-        }
-
-        public void regetaccounts()
-        {
-            DataTable table = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `accounts`", getConnection());
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
         }
     }
 }

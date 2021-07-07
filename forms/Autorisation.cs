@@ -22,8 +22,8 @@ namespace parolchiki.forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string rlog = textBox1.Text;
-            string rpass = textBox2.Text;
+            string rlog = login.Text;
+            string rpass = password.Text;
 
             DB db = new DB();
 
